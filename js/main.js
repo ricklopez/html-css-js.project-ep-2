@@ -15,20 +15,4 @@ fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
 
 // 2. Use that data on a web page
 
-function updateUI(className, data){
-    debugger;
-    // grab all img
-    var imgs = Array.from(document.getElementsByClassName(className + 'img'));
-    // change the img
-    imgs.forEach(function(item, index){
-        item.src = data[index].avatar;
-    });
-
-    // grab all name
-    var names = Array.from(document.getElementsByClassName(className + 'name'));
-    // change the name
-    // imgs.forEach(function(item, index){
-    //     item.src = data[index].avatar;
-    // });
-}
-
+createVideoCard();
