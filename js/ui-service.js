@@ -18,11 +18,17 @@ function createVideoCard(data){
         img.classList.add("video-img");
         var p = document.createElement("p");
         p.classList.add("video-name");
-        var pText  = document.createTextNode("This is a text node");
-        img.src = "//via.placeholder.com/150";
+        var button = document.createElement("a");
+        var buttonLabel = document.createTextNode("Watch");
+        button.href = item.url;
+        button.target = "_blank";
+        button.appendChild(buttonLabel);
+        var pText  = document.createTextNode(item.name);
+        img.src = item.avatar;
         p.appendChild(pText);
         col.appendChild(img);
         col.appendChild(p);
+        col.appendChild(button);
         row.appendChild(col);
     });
 
