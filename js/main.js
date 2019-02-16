@@ -15,6 +15,10 @@ fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
         console.log(data.length);
     });
 
-// 2. Use that data on a web page
+// Search
+debugger;
+var searchBtn = document.querySelector("#searchVideos");
 
-//createVideoCard(data, "gridMain");
+searchBtn.addEventListener('input', function(e){
+   console.log(e.target);
+});
