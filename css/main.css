@@ -10,11 +10,30 @@
 
 
 .col {
-    width: 25%;
-    float: left;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*Util*/
 .text-center {
     text-align: center;
+}
+
+/*Media Queries*/
+@media all and (min-width: 1199px) {
+
+}
+@media all and (min-width: 991px) {
+
+
+}
+@media all and (min-width: 768px) {
+    .col {
+        width: 25%;
+        float: left;
+    }
+}
+@media all and (max-width: 575px) {
+
 }
