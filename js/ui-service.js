@@ -18,32 +18,23 @@ function createVideoCard(data, targetId){
     debugger;
     var parentEl = document.querySelector("#" + targetId);
     var row = document.createElement("div");
-    // var col = document.createElement("div");
-    // var img = document.createElement("img");
-    // var p = document.createElement("p");
+    row.classList.add("row");
 
-    // var pText  = document.createTextNode("This is a text node");
-    // img.src = "//via.placeholder.com/150";
-
-    // p.appendChild(pText);
 
     [1,2,3,4].forEach(function(item){
         var col = document.createElement("div");
+        col.classList.add("col");
         var img = document.createElement("img");
+        img.classList.add("video-img");
         var p = document.createElement("p");
+        p.classList.add("video-name");
         var pText  = document.createTextNode("This is a text node");
         img.src = "//via.placeholder.com/150";
         p.appendChild(pText);
-
-
         col.appendChild(img);
         col.appendChild(p);
-
         row.appendChild(col);
     });
-    // col.appendChild(img);
-    // col.appendChild(p);
-    //row.appendChild(col);
 
     parentEl.appendChild(row);
 }
