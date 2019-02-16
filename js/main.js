@@ -15,4 +15,4 @@ fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
 
 // 2. Use that data on a web page
 
-createVideoCard();
+createVideoCard(data, "gridMain");

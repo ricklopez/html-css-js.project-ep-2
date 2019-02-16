@@ -16,18 +16,36 @@ function updateUI(className, data){
 
 function createVideoCard(data, targetId){
     debugger;
-    var parentEl = document.querySelector("#gridMain");
+    var parentEl = document.querySelector("#" + targetId);
     var row = document.createElement("div");
-    var col = document.createElement("div");
-    var img = document.createElement("img");
-    var p = document.createElement("p");
+    // var col = document.createElement("div");
+    // var img = document.createElement("img");
+    // var p = document.createElement("p");
 
-    var pText  = document.createTextNode("This is a text node");
+    // var pText  = document.createTextNode("This is a text node");
+    // img.src = "//via.placeholder.com/150";
 
-    p.appendChild(pText);
+    // p.appendChild(pText);
+
+    [1,2,3,4].forEach(function(item){
+        var col = document.createElement("div");
+        var img = document.createElement("img");
+        var p = document.createElement("p");
+        var pText  = document.createTextNode("This is a text node");
+        img.src = "//via.placeholder.com/150";
+        p.appendChild(pText);
 
 
-    parentEl.appendChild(p);
+        col.appendChild(img);
+        col.appendChild(p);
+
+        row.appendChild(col);
+    });
+    // col.appendChild(img);
+    // col.appendChild(p);
+    //row.appendChild(col);
+
+    parentEl.appendChild(row);
 }
 
 //div.row
