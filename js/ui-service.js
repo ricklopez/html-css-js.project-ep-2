@@ -14,6 +14,7 @@ function createVideoCard(data){
     data.forEach(function(item){
         var col = document.createElement("div");
         col.classList.add("col");
+        col.classList.add("video-card");
         var img = document.createElement("img");
         img.classList.add("video-img");
         var p = document.createElement("p");
