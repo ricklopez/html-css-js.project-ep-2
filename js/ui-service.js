@@ -1,27 +1,17 @@
-function updateUI(className, data){
-    // grab all img
-    var imgs = Array.from(document.getElementsByClassName(className + 'img'));
-    // change the img
-    imgs.forEach(function(item, index){
-        item.src = data[index].avatar;
-    });
-
-    // grab all name
-    var names = Array.from(document.getElementsByClassName(className + 'name'));
-    // change the name
-    // imgs.forEach(function(item, index){
-    //     item.src = data[index].avatar;
-    // });
+function updateUI(components, data){
+   components.forEach(function(component, index){
+       component(data[index]);
+   });
 }
 
-function createVideoCard(data, targetId){
+function createVideoCard(data){
     debugger;
-    var parentEl = document.querySelector("#" + targetId);
+    var parentEl = document.querySelector("#" + data.targetId);
     var row = document.createElement("div");
     row.classList.add("row");
 
 
-    [1,2,3,4].forEach(function(item){
+    data.forEach(function(item){
         var col = document.createElement("div");
         col.classList.add("col");
         var img = document.createElement("img");
