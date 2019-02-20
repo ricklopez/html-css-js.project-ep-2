@@ -5,12 +5,13 @@ function updateUI(components, data){
     })
 
 }
-function creationVideoRow(cards){
+
+function creationVideoRow(cards) {
 
 }
 
+// knows how to create a row of video cards on the web page
 function createVideoCard(data){
-    debugger;
     var parentEl = document.querySelector(data.targetId);
     var row = document.createElement("div");
     row.classList.add("row");
@@ -21,6 +22,7 @@ function createVideoCard(data){
         col.classList.add("col");
         col.classList.add("text-center");
         col.classList.add("video-card");
+        col.classList.add("bg-color-grey");
 
         var img = document.createElement("img");
         img.classList.add("video-img");
