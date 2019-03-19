@@ -1,6 +1,7 @@
 // 1. Get some data from an API
 
 var data = [];
+var grid = document.querySelector('#gridMain');
 
 fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
     .then(function(response) {
@@ -8,11 +9,9 @@ fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
     })
     .then(function(myJson) {
         data = myJson;
-        data.targetId = "#gridMain";
-        updateUI([createVideoCard], [data]);
+        rivets.bind(grid, {videos: data});
 
         //TODO: Refactor: Move this to a search-service
-
         var searchBar = document.querySelector("#searchVideos");
         var videos = document.querySelectorAll(".video-card");
         var videoData = document.querySelectorAll(".video-name");
@@ -43,6 +42,8 @@ fetch('http://5c5f1d0b3668970014fd1c04.mockapi.io/api/video')
 // searchBar.addEventListener('input', function(event){
 //     console.log(event.target);
 // });
+
+
 
 
 

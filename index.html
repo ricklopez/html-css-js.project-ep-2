@@ -5,6 +5,7 @@
         <title>Video Manager</title>
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -22,9 +23,15 @@
 
         </div>
         <div class="container" id="gridMain">
-
+            <div class="row">
+                <div class="three columns text-center video-card" rv-each-item="videos">
+                    <img class="video-img" rv-src="item.avatar">
+                    <p class="video-name">{item.name}</p>
+                    <a href="{item.url}">Watch</a>
+                </div>
+            </div>
         </div>
-        <script src="js/ui-serivice.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
